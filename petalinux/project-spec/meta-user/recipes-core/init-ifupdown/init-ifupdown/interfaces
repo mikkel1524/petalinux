@@ -1,0 +1,9 @@
+# Konfiguracja sieci dla PetaLinux z NFS
+
+# Loopback interface
+auto lo
+iface lo inet loopback
+
+# Ethernet interface
+auto eth0
+iface eth0 inet dhcp
