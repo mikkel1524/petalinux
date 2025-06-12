@@ -48,6 +48,7 @@ if [ -z "$ROOTFS_IMG" ]; then
 fi
 
 echo "Rozpakowanie $ROOTFS_IMG do $NFS_ROOT..."
+rm -rf "$NFS_ROOT"/*  # Czyszczenie katalogu przed rozpakowaniem
 tar -xzf "$ROOTFS_IMG" -C "$NFS_ROOT"
 
 # Znajdü obraz jπdra
@@ -64,7 +65,7 @@ if [ -z "$KERNEL_IMG" ]; then
     exit 1
 fi
 
-echo "Kopiowanie $KERNEL_IMG do $TFTP_ROOT..."
+echo "Kopiowanie $KERNEL_IMG do $TFTP_ROOT/Image..."
 cp "$KERNEL_IMG" "$TFTP_ROOT/Image"
 
 # Znajdü DTB
@@ -83,6 +84,10 @@ fi
 
 echo "Kopiowanie $DTB_IMG do $TFTP_ROOT/system.dtb..."
 cp "$DTB_IMG" "$TFTP_ROOT/system.dtb"
+
+# Dodatkowa konfiguracja dla NFS (prawa dostÍpu)
+chown -R nobody:nogroup "$NFS_ROOT"
+chmod -R 777 "$NFS_ROOT"
 
 echo "Wszystkie obrazy zosta≥y skopiowane."
 echo "Gotowe!"

@@ -1,6 +1,6 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
-SRC_URI += "file://platform-top.h"
+SRC_URI += "file://platform-top.h file://bsp.cfg"
 
 do_configure:append() {
     if [ -e ${WORKDIR}/platform-top.h ]; then

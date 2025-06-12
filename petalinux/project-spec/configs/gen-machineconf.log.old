@@ -1,14 +1,14 @@
-2025-06-12 09:19:29,168 - [DEBUG] Using xsct from : /home/ja/petalinux/components/xsct/bin/xsct
-2025-06-12 09:19:29,168 - [INFO] Getting Platform info from HW file
-2025-06-12 09:19:29,168 - [DEBUG] Using the soc_family specified by user:zynq
-2025-06-12 09:19:29,175 - [DEBUG] Hardware Configuration:
-2025-06-12 09:19:29,175 - [DEBUG] MACHINE     = "None"
-2025-06-12 09:19:29,175 - [DEBUG] DEVICE_ID   = "7z020"
-2025-06-12 09:19:29,175 - [DEBUG] SOC_FAMILY  = "zynq"
-2025-06-12 09:19:29,175 - [DEBUG] SOC_VARIANT = ""
-2025-06-12 09:19:29,175 - [INFO] Silentconfig project
-2025-06-12 09:19:29,175 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/config conf /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/configs/Kconfig
-2025-06-12 09:19:29,179 - [DEBUG] *
+2025-06-12 09:21:41,631 - [DEBUG] Using xsct from : /home/ja/petalinux/components/xsct/bin/xsct
+2025-06-12 09:21:41,631 - [INFO] Getting Platform info from HW file
+2025-06-12 09:21:41,631 - [DEBUG] Using the soc_family specified by user:zynq
+2025-06-12 09:21:41,641 - [DEBUG] Hardware Configuration:
+2025-06-12 09:21:41,641 - [DEBUG] MACHINE     = "None"
+2025-06-12 09:21:41,641 - [DEBUG] DEVICE_ID   = "7z020"
+2025-06-12 09:21:41,641 - [DEBUG] SOC_FAMILY  = "zynq"
+2025-06-12 09:21:41,641 - [DEBUG] SOC_VARIANT = ""
+2025-06-12 09:21:41,641 - [INFO] Silentconfig project
+2025-06-12 09:21:41,641 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/config conf /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/configs/Kconfig
+2025-06-12 09:21:41,647 - [DEBUG] *
 * PetaLinux System Configuration
 *
 ZYNQ Configuration (SYSTEM_ZYNQ) [Y/?] y
@@ -245,15 +245,15 @@ user layer 0 (USER_LAYER_0) []
 #
 # configuration written to /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/config
 #
-2025-06-12 09:19:29,223 - [DEBUG] /home/ja/Dokumenty/projekty/peta/petalinux/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/petalinux-find-ipaddr AUTO
-2025-06-12 09:19:29,236 - [DEBUG] 
+2025-06-12 09:21:41,673 - [DEBUG] /home/ja/Dokumenty/projekty/peta/petalinux/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/petalinux-find-ipaddr AUTO
+2025-06-12 09:21:41,686 - [DEBUG] 
 192.168.100.118
 
 
 
-2025-06-12 09:19:29,238 - [INFO] Silentconfig rootfs
-2025-06-12 09:19:29,238 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfs_config conf /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig
-2025-06-12 09:19:29,245 - [DEBUG] *
+2025-06-12 09:21:41,688 - [INFO] Silentconfig rootfs
+2025-06-12 09:21:41,688 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfs_config conf /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig
+2025-06-12 09:21:41,696 - [DEBUG] *
 * Configuration
 *
 *
@@ -3543,8 +3543,8 @@ nfs-utils (nfs-utils) [Y/n/?]
 nfs-utils-client (nfs-utils-client) [N/y/?] 
 net-tools (net-tools) [N/y/?] 
 ethtool (ethtool) [N/y/?] 
-gpio-demo (gpio-demo) [N/y/?] (NEW) 
-peekpoke (peekpoke) [N/y/?] (NEW) 
+gpio-demo (gpio-demo) [N/y/?] 
+peekpoke (peekpoke) [N/y/?] 
 *
 * PetaLinux RootFS Settings
 *
@@ -3555,13 +3555,7 @@ Add Users to Sudo users (ADD_USERS_TO_SUDOERS) [petalinux]
 #
 # configuration written to /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfs_config
 #
-2025-06-12 09:19:29,248 - [INFO] Generating configuration files
-2025-06-12 09:19:29,248 - [DEBUG] No multilibs enabled.
-2025-06-12 09:19:29,248 - [DEBUG] No multilibs enabled.
-2025-06-12 09:19:29,256 - [INFO] Generating plnxtool conf file
-2025-06-12 09:19:29,263 - [DEBUG] python3 /home/ja/Dokumenty/projekty/peta/petalinux/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/rootfsconfigs/rootfs_config.py --update_cfg /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfs_config /home/ja/Dokumenty/projekty/peta/petalinux/build/conf/plnxtool.conf zynq
-2025-06-12 09:19:29,296 - [DEBUG] 
-
-
-
-2025-06-12 09:19:29,297 - [DEBUG] Shutting down bitbake
+2025-06-12 09:21:41,701 - [INFO] Generating configuration files
+2025-06-12 09:21:41,702 - [DEBUG] No multilibs enabled.
+2025-06-12 09:21:41,702 - [DEBUG] No multilibs enabled.
+2025-06-12 09:21:41,710 - [DEBUG] Shutting down bitbake
