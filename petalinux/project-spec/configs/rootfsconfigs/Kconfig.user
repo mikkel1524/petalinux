@@ -1,26 +1,2 @@
 menu "user packages " 
-config ethtool=y  
-	 bool "ethtool=y"
-	 help
-	
-config gpio-demo  
-	 bool "gpio-demo"
-	 help
-	
-config net-tools=y  
-	 bool "net-tools=y"
-	 help
-	
-config nfs-utils-client=y  
-	 bool "nfs-utils-client=y"
-	 help
-	
-config nfs-utils=y  
-	 bool "nfs-utils=y"
-	 help
-	
-config peekpoke  
-	 bool "peekpoke"
-	 help
-	
 endmenu

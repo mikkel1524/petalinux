@@ -12,7 +12,7 @@ Ta konfiguracja umo¿liwia uruchomienie systemu PetaLinux z obrazem rootfs zamont
 
 ## Konfiguracja serwera
 
-1. Uruchom skrypt pomocniczy jako root:
+1. Uruchom skrypt pomocniczy jako root, aby skonfigurowaæ serwer NFS i TFTP:
 
    ```bash
    sudo ./nfs_setup.sh
@@ -26,16 +26,15 @@ Ta konfiguracja umo¿liwia uruchomienie systemu PetaLinux z obrazem rootfs zamont
    petalinux-build
    ```
 
-3. Skopiuj obrazy do odpowiednich katalogów:
+3. Uruchom drugi skrypt, aby skopiowaæ obrazy do odpowiednich katalogów:
 
    ```bash
-   # Rozpakuj obraz rootfs do katalogu NFS
-   sudo tar -xzf images/linux/petalinux-rootfs.tar.gz -C /home/NFSshare
-
-   # Skopiuj kernel i DTB do katalogu TFTP
-   sudo cp images/linux/Image /tftpboot/
-   sudo cp images/linux/system.dtb /tftpboot/
+   sudo ./nfs_setup_rootfs.sh
    ```
+
+   Ten skrypt automatycznie:
+   - Rozpakuje obraz rootfs do katalogu NFS (/home/NFSshare)
+   - Skopiuje kernel (Image) i DTB (system.dtb) do katalogu TFTP (/tftpboot/)
 
 ## Konfiguracja sieci
 

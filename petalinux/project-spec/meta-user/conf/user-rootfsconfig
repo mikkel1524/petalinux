@@ -1,8 +1,8 @@
 #Note: Mention Each package in individual line
 #These packages will get added into rootfs menu entry
-CONFIG_nfs-utils=y
-CONFIG_nfs-utils-client=y
-CONFIG_net-tools=y
-CONFIG_ethtool=y
-CONFIG_gpio-demo
-CONFIG_peekpoke
+nfs-utils
+nfs-utils-client
+net-tools
+ethtool
+gpio-demo
+peekpoke

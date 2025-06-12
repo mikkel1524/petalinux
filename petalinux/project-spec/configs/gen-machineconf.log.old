@@ -1,14 +1,14 @@
-2025-06-12 06:11:02,811 - [DEBUG] Using xsct from : /home/ja/petalinux/components/xsct/bin/xsct
-2025-06-12 06:11:02,811 - [INFO] Getting Platform info from HW file
-2025-06-12 06:11:02,811 - [DEBUG] Using the soc_family specified by user:zynq
-2025-06-12 06:11:02,819 - [DEBUG] Hardware Configuration:
-2025-06-12 06:11:02,819 - [DEBUG] MACHINE     = "None"
-2025-06-12 06:11:02,819 - [DEBUG] DEVICE_ID   = "7z020"
-2025-06-12 06:11:02,819 - [DEBUG] SOC_FAMILY  = "zynq"
-2025-06-12 06:11:02,819 - [DEBUG] SOC_VARIANT = ""
-2025-06-12 06:11:02,819 - [INFO] Silentconfig project
-2025-06-12 06:11:02,819 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/config conf /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/configs/Kconfig
-2025-06-12 06:11:02,824 - [DEBUG] *
+2025-06-12 09:14:11,306 - [DEBUG] Using xsct from : /home/ja/petalinux/components/xsct/bin/xsct
+2025-06-12 09:14:11,306 - [INFO] Getting Platform info from HW file
+2025-06-12 09:14:11,306 - [DEBUG] Using the soc_family specified by user:zynq
+2025-06-12 09:14:11,317 - [DEBUG] Hardware Configuration:
+2025-06-12 09:14:11,317 - [DEBUG] MACHINE     = "None"
+2025-06-12 09:14:11,317 - [DEBUG] DEVICE_ID   = "7z020"
+2025-06-12 09:14:11,317 - [DEBUG] SOC_FAMILY  = "zynq"
+2025-06-12 09:14:11,317 - [DEBUG] SOC_VARIANT = ""
+2025-06-12 09:14:11,317 - [INFO] Silentconfig project
+2025-06-12 09:14:11,317 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/config conf /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/configs/Kconfig
+2025-06-12 09:14:11,322 - [DEBUG] *
 * PetaLinux System Configuration
 *
 ZYNQ Configuration (SYSTEM_ZYNQ) [Y/?] y
@@ -187,10 +187,11 @@ Root filesystem type
   1. INITRAMFS (SUBSYSTEM_ROOTFS_INITRAMFS)
   2. INITRD (SUBSYSTEM_ROOTFS_INITRD)
   3. UBI/UBIFS (SUBSYSTEM_ROOTFS_UBIFS)
-  4. NFS (SUBSYSTEM_ROOTFS_NFS)
-> 5. EXT4 (SD/eMMC/SATA/USB) (SUBSYSTEM_ROOTFS_EXT4)
+> 4. NFS (SUBSYSTEM_ROOTFS_NFS)
+  5. EXT4 (SD/eMMC/SATA/USB) (SUBSYSTEM_ROOTFS_EXT4)
   6. other (SUBSYSTEM_ROOTFS_OTHER)
-choice[1-6]: Device node of SD device (SUBSYSTEM_SDROOT_DEV) [/dev/mmcblk0p2] 
+choice[1-6]: Location of NFS root directory (SUBSYSTEM_NFSROOT_DIR) [/tftpboot/nfsroot] (NEW) 
+NFS Server IP address (SUBSYSTEM_NFSSERVER_IP) [AUTO] (NEW) 
 name for bootable kernel image (SUBSYSTEM_UIMAGE_NAME) [image.ub] 
 Root filesystem formats (SUBSYSTEM_RFS_FORMATS) [cpio cpio.gz cpio.gz.u-boot ext4 tar.gz] 
 Copy final images to tftpboot (SUBSYSTEM_COPY_TO_TFTPBOOT) [Y/n/?] 
@@ -244,16 +245,75 @@ user layer 0 (USER_LAYER_0) []
 #
 # configuration written to /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/config
 #
-2025-06-12 06:11:02,848 - [INFO] Menuconfig rootfs
-2025-06-12 06:11:02,848 - [DEBUG] Running CMD: env KCONFIG_CONFIG=/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfs_config mconf -s /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig
-2025-06-12 06:11:39,428 - [INFO] Generating configuration files
-2025-06-12 06:11:39,429 - [DEBUG] No multilibs enabled.
-2025-06-12 06:11:39,430 - [DEBUG] No multilibs enabled.
-2025-06-12 06:11:39,430 - [DEBUG] Skip adding layers as no bitbake-layers or builddir found
-2025-06-12 06:11:39,440 - [INFO] Generating plnxtool conf file
-2025-06-12 06:11:39,448 - [DEBUG] python3 /home/ja/Dokumenty/projekty/peta/petalinux/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/rootfsconfigs/rootfs_config.py --update_cfg /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfs_config /home/ja/Dokumenty/projekty/peta/petalinux/build/conf/plnxtool.conf zynq
-2025-06-12 06:11:39,488 - [DEBUG] 
+2025-06-12 09:14:11,346 - [DEBUG] /home/ja/Dokumenty/projekty/peta/petalinux/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/petalinux-find-ipaddr AUTO
+2025-06-12 09:14:11,359 - [DEBUG] 
+192.168.100.118
 
 
 
-2025-06-12 06:11:39,489 - [DEBUG] Shutting down bitbake
+2025-06-12 09:14:11,360 - [DEBUG] xsct -sdx -nodisp /home/ja/Dokumenty/projekty/peta/petalinux/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/petalinux_hsm.tcl get_flash_width_parts /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/config /home/ja/Dokumenty/projekty/peta/petalinux/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/data/ipinfo.yaml /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/hw-description/system.xsa /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/flash_parts.txt
+2025-06-12 09:14:16,129 - [DEBUG] 
+
+****** Software Commandline Tool (XSCT) v2024.2.0
+  **** SW Build 5233591 on Sat Nov 02 20:05:54 MDT 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+Warning: XSCT is deprecated and will be removed in future releases.
+We recommend using the new Python command-line tool for project management and debugging:
+- Run "vitis -i" for interactive mode.
+- Run "vitis -s <script>" for script mode.
+WARNING: sdtgen package cannot be loaded. System Device tree commands will not 
+ be available
+INFO: [Hsi 55-2053] elapsed time for repository (/home/ja/petalinux/components/xsct/data/embeddedsw) loading 0 seconds
+
+WARNING: Failed in finding /home/ja/petalinux/components/xsct/data/system-device-tree-xlnx/device_tree/data/device_tree.tcl path.
+
+
+2025-06-12 09:14:16,132 - [INFO] Generating kconfig for rootfs
+2025-06-12 09:14:16,132 - [DEBUG] python3 /home/ja/Dokumenty/projekty/peta/petalinux/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/rootfsconfigs/rootfs_config.py --generate_kconfig /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/meta-user/conf/user-rootfsconfig /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs
+2025-06-12 09:14:16,182 - [DEBUG] 
+
+
+
+2025-06-12 09:14:16,182 - [INFO] Silentconfig rootfs
+2025-06-12 09:14:16,182 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfs_config conf /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig
+2025-06-12 09:14:16,185 - [DEBUG] /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:3: syntax error
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:1: missing end statement for this entry
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:2: invalid statement
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:3: unexpected option "bool"
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:4: invalid statement
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:11: syntax error
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:10: invalid statement
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:11: unexpected option "bool"
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:12: invalid statement
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:15: syntax error
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:14: invalid statement
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:15: unexpected option "bool"
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:16: invalid statement
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:19: syntax error
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:18: invalid statement
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:19: unexpected option "bool"
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:20: invalid statement
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:26: unexpected end statement
+2025-06-12 09:14:16,185 - [ERROR] Failed to silentconfig rootfs
+2025-06-12 09:14:16,185 - [ERROR] /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:3: syntax error
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:1: missing end statement for this entry
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:2: invalid statement
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:3: unexpected option "bool"
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:4: invalid statement
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:11: syntax error
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:10: invalid statement
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:11: unexpected option "bool"
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:12: invalid statement
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:15: syntax error
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:14: invalid statement
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:15: unexpected option "bool"
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:16: invalid statement
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:19: syntax error
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:18: invalid statement
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:19: unexpected option "bool"
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:20: invalid statement
+/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig.user:26: unexpected end statement
+2025-06-12 09:14:16,185 - [DEBUG] Shutting down bitbake
