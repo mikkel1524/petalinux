@@ -1,10 +1,10 @@
 # Konfiguracja dla obrazu NFS
-# Plik w³¹czany w petalinux-image-minimal.bbappend
+# Plik dolaczany w petalinux-image-minimal.bbappend
 
 # Ustawienie formatu obrazu
 IMAGE_FSTYPES:append = " tar.gz ext4"
 
-# Dodanie pakietów dla NFS
+# Dodanie pakietow dla NFS
 IMAGE_INSTALL:append = " \
     nfs-utils \
     nfs-utils-client \

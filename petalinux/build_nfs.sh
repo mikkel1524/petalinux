@@ -4,13 +4,17 @@
 
 set -e
 
+echo "Krok 0: Naprawa kodowania plikow"
+chmod +x ./fix_encodings.sh
+./fix_encodings.sh
+
 echo "Krok 1: Budowanie projektu PetaLinux"
 petalinux-build
 
-echo "Krok 2: Tworzenie katalogów NFS/TFTP (wymagane uprawnienia roota)"
+echo "Krok 2: Tworzenie katalogow NFS/TFTP (wymagane uprawnienia roota)"
 sudo ./nfs_setup.sh
 
-echo "Krok 3: Kopiowanie plików do katalogów NFS/TFTP (wymagane uprawnienia roota)"
+echo "Krok 3: Kopiowanie plikow do katalogow NFS/TFTP (wymagane uprawnienia roota)"
 sudo ./nfs_setup_rootfs.sh
 
-echo "Proces zakoñczony pomyœlnie!"
+echo "Proces zakonczony pomyslnie!"
