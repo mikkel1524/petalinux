@@ -1,6 +1,6 @@
 # Dodanie konfiguracji NFS do obrazu minimalnego
 
-# Konfiguracja dla obrazu NFS
+# Konfiguracja dla obrazu NFS z wymuszeniem wersji 3
 
 # Ustawienie formatu obrazu
 IMAGE_FSTYPES:append = " tar.gz ext4"
@@ -21,7 +21,11 @@ create_nfs_config() {
     echo "iface eth0 inet dhcp" >> ${IMAGE_ROOTFS}/etc/network/interfaces.d/eth0
 
     # Informacja o NFS
-    echo "System NFS skonfigurowany" > ${IMAGE_ROOTFS}/etc/nfs-config-info
+    echo "System NFS v3 skonfigurowany" > ${IMAGE_ROOTFS}/etc/nfs-config-info
+
+    # Dodanie opcji montowania NFS v3 do profile
+    echo "# Opcje NFS v3" >> ${IMAGE_ROOTFS}/etc/profile
+    echo "export NFS_MOUNT_OPTIONS=\"vers=3\"" >> ${IMAGE_ROOTFS}/etc/profile
 }
 
 ROOTFS_POSTPROCESS_COMMAND += "create_nfs_config; "

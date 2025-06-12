@@ -1,6 +1,10 @@
-# Pusta konfiguracja fstab tworzymy podczas instalacji
+# Dodanie konfiguracji fstab dla NFSv3
+
+FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
+
+SRC_URI += "file://fstab"
 
 do_install:append() {
-    # Tworzymy pusty fstab dla NFS
-    echo "# Pusta konfiguracja fstab dla systemu NFS" > ${D}${sysconfdir}/fstab
+    # Upewniamy sie, ze katalog /mnt/nfs istnieje
+    install -d ${D}/mnt/nfs
 }

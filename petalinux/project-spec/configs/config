@@ -263,4 +263,4 @@ CONFIG_YOCTO_NETWORK_SSTATE_FEEDS_URL="https://petalinux.xilinx.com/sswreleases/
 # User Layers
 #
 CONFIG_USER_LAYER_0=""
-CONFIG_SUBSYSTEM_BOOTARGS_GENERATED="console=ttyPS0,115200 earlycon root=/dev/nfs nfsroot=192.168.100.118:/tftpboot/nfsroot,tcp ip=dhcp rw"
+CONFIG_SUBSYSTEM_BOOTARGS_GENERATED="console=ttyPS0,115200 earlycon root=/dev/nfs nfsroot=192.168.64.32:/home/NFSshare,tcp ip=dhcp rw"

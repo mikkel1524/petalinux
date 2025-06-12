@@ -1,3 +1,9 @@
 /include/ "system-conf.dtsi"
 / {
 };
+/include/ "system-conf.dtsi"
+/{
+    chosen {
+        bootargs = "earlycon console=ttyPS0,115200 clk_ignore_unused root=/dev/nfs nfsroot=192.168.64.32:/home/NFSshare,tcp,nfsvers=3 rw ip=dhcp";
+    };
+};

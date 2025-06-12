@@ -29,7 +29,7 @@
     "bootcmd_tftp=setenv autoload no; dhcp; run netloadimage; run netloadfdt; run netboot;\0" \
     "netloadimage=tftp ${kernel_load_address} ${kernel_image};\0" \
     "netloadfdt=tftp ${devicetree_load_address} ${devicetree_image};\0" \
-    "netboot=setenv bootargs console=ttyPS0,115200 earlycon root=/dev/nfs nfsroot=${nfsroot},tcp,v3 rw rootwait ip=dhcp; booti ${kernel_load_address} - ${devicetree_load_address};\0" \
+    "netboot=setenv bootargs console=ttyPS0,115200 earlycon root=/dev/nfs nfsroot=${nfsroot},tcp,nfsvers=3 rw rootwait ip=dhcp; booti ${kernel_load_address} - ${devicetree_load_address};\0" \
     "nfsroot=192.168.64.32:/home/NFSshare;\0"
 
 #endif

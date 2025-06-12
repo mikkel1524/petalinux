@@ -1,0 +1,5 @@
+# /etc/fstab: static file system information.
+# Konfiguracja dla NFSv3
+
+# <file system> <mount point>   <type>  <options>               <dump>  <pass>
+192.168.64.32:/home/NFSshare   /mnt/nfs    nfs     vers=3,rw,noatime     0       0
