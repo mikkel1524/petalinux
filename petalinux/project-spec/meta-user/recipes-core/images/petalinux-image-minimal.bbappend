@@ -1,6 +1,9 @@
 # Dodanie konfiguracji NFS do obrazu minimalnego
 
-# Konfiguracja dla obrazu NFS z wymuszeniem wersji 3
+# Konfiguracja dla obrazu NFS z wymuszeniem wersji 3 i statycznym IP
+
+# Do³¹czenie pliku konfiguracyjnego dla statycznego IP
+require recipes-core/images/static-ip-config.inc
 
 # Ustawienie formatu obrazu
 IMAGE_FSTYPES:append = " tar.gz ext4"
@@ -11,14 +14,11 @@ IMAGE_INSTALL:append = " \
     nfs-utils-client \
     net-tools \
     ethtool \
+    iptables \
 "
 
 # Konfiguracja sieci dla NFS
 create_nfs_config() {
-    # Konfiguracja interfejsu sieciowego
-    install -d ${IMAGE_ROOTFS}/etc/network/interfaces.d
-    echo "auto eth0" > ${IMAGE_ROOTFS}/etc/network/interfaces.d/eth0
-    echo "iface eth0 inet dhcp" >> ${IMAGE_ROOTFS}/etc/network/interfaces.d/eth0
 
     # Informacja o NFS
     echo "System NFS v3 skonfigurowany" > ${IMAGE_ROOTFS}/etc/nfs-config-info

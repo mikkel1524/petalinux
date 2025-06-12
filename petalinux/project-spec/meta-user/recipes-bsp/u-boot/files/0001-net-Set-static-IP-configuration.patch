@@ -1,0 +1,31 @@
+From 987654321000000000000000000000000000001 Mon Sep 17 00:00:00 2001
+From: PetaLinux User <petalinux@example.com>
+Date: Fri, 12 Jun 2025 10:00:00 +0200
+Subject: [PATCH] net: Set static IP configuration
+
+Disable DHCP and use static IP configuration
+---
+ include/configs/zynq-common.h | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+diff --git a/include/configs/zynq-common.h b/include/configs/zynq-common.h
+index 1234567..abcdefg 100644
+--- a/include/configs/zynq-common.h
++++ b/include/configs/zynq-common.h
+@@ -123,6 +123,14 @@
+
+ #define CONFIG_SYS_MALLOC_LEN		(CONFIG_ENV_SIZE + 0x2000000)
+
++/* Static IP configuration */
++#define CONFIG_BOOTCOMMAND		"run bootcmd_tftp; run bootcmd_mmc; run bootcmd_qspi;"
++#define CONFIG_IPADDR			192.168.64.80
++#define CONFIG_SERVERIP		192.168.64.32
++#define CONFIG_GATEWAYIP		192.168.64.1
++#define CONFIG_NETMASK		255.255.255.0
++#define CONFIG_HOSTNAME		"peta"
++
+ /* Physical Memory map */
+ #if defined(CONFIG_ZYNQ_CUSTOM_MEM_MAP) && !defined(CONFIG_CUSTOM_MEM_MAP)
+ #error CONFIG_ZYNQ_CUSTOM_MEM_MAP for old style memory map. Use CONFIG_CUSTOM_MEM_MAP
+-- 
+2.25.1

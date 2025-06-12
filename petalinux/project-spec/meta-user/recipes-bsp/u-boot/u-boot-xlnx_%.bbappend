@@ -1,4 +1,5 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
+SRC_URI += "file://0001-net-Set-static-IP-configuration.patch"
 
 SRC_URI += "file://platform-top.h file://bsp.cfg"
 

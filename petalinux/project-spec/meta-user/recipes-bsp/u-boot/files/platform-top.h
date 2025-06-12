@@ -26,10 +26,14 @@
     "run bootcmd_tftp; run bootcmd_mmc; run bootcmd_qspi;"
 
 #define CONFIG_EXTRA_ENV_SETTINGS \
-    "bootcmd_tftp=setenv autoload no; dhcp; run netloadimage; run netloadfdt; run netboot;\0" \
+    "ipaddr=192.168.64.80\0" \
+    "serverip=192.168.64.32\0" \
+    "gatewayip=192.168.64.1\0" \
+    "netmask=255.255.255.0\0" \
+    "bootcmd_tftp=setenv autoload no; run netloadimage; run netloadfdt; run netboot;\0" \
     "netloadimage=tftp ${kernel_load_address} ${kernel_image};\0" \
     "netloadfdt=tftp ${devicetree_load_address} ${devicetree_image};\0" \
-    "netboot=setenv bootargs console=ttyPS0,115200 earlycon root=/dev/nfs nfsroot=${nfsroot},tcp,nfsvers=3 rw rootwait ip=dhcp; booti ${kernel_load_address} - ${devicetree_load_address};\0" \
+    "netboot=setenv bootargs console=ttyPS0,115200 earlycon root=/dev/nfs nfsroot=${nfsroot},tcp,nfsvers=3 rw rootwait ip=${ipaddr}:${serverip}:${gatewayip}:${netmask}:peta:eth0:off; booti ${kernel_load_address} - ${devicetree_load_address};\0" \
     "nfsroot=192.168.64.32:/home/NFSshare;\0"
 
 #endif
