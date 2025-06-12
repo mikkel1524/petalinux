@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2.1 (64-bit)
+# SW Build 5266912 on Sun Dec 15 09:03:31 MST 2024
+# IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
+# SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
+# Start of session at: Thu May 29 10:14:48 2025
+# Process ID         : 7171
+# Current directory  : /home/ja/Dokumenty/projekty/projekt2/vivado/project_1.runs/hw_rst_ps7_0_100M_0_synth_1
+# Command line       : vivado -log hw_rst_ps7_0_100M_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hw_rst_ps7_0_100M_0.tcl
+# Log file           : /home/ja/Dokumenty/projekty/projekt2/vivado/project_1.runs/hw_rst_ps7_0_100M_0_synth_1/hw_rst_ps7_0_100M_0.vds
+# Journal file       : /home/ja/Dokumenty/projekty/projekt2/vivado/project_1.runs/hw_rst_ps7_0_100M_0_synth_1/vivado.jou
+# Running On         : petalinuxowy
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 22.04.5 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-14600KF
+# CPU Frequency      : 3494.400 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 16
+# Host memory        : 33607 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 35754 MB
+# Available Virtual  : 32206 MB
+#-----------------------------------------------------------
+source hw_rst_ps7_0_100M_0.tcl -notrace

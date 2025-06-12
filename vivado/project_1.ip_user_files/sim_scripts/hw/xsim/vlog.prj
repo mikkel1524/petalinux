@@ -1,0 +1,53 @@
+verilog xil_defaultlib --include "/home/ja/vivado/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../project_1.gen/sources_1/bd/hw/ipshared/ec67/hdl" --include "../../../../project_1.gen/sources_1/bd/hw/ipshared/8391/hdl" --include "../../../../project_1.gen/sources_1/bd/hw/ipshared/f0b6/hdl/verilog" --include "../../../../project_1.gen/sources_1/bd/hw/ipshared/0127/hdl/verilog" \
+"../../../bd/hw/ip/hw_processing_system7_0_0/sim/hw_processing_system7_0_0.v" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_0/sim/bd_bf64_one_0.v" \
+
+sv xil_defaultlib --include "/home/ja/vivado/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../project_1.gen/sources_1/bd/hw/ipshared/ec67/hdl" --include "../../../../project_1.gen/sources_1/bd/hw/ipshared/8391/hdl" --include "../../../../project_1.gen/sources_1/bd/hw/ipshared/f0b6/hdl/verilog" --include "../../../../project_1.gen/sources_1/bd/hw/ipshared/0127/hdl/verilog" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_2/sim/bd_bf64_arinsw_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_3/sim/bd_bf64_rinsw_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_4/sim/bd_bf64_awinsw_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_5/sim/bd_bf64_winsw_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_6/sim/bd_bf64_binsw_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_7/sim/bd_bf64_aroutsw_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_8/sim/bd_bf64_routsw_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_9/sim/bd_bf64_awoutsw_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_10/sim/bd_bf64_woutsw_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_11/sim/bd_bf64_boutsw_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_12/sim/bd_bf64_arni_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_13/sim/bd_bf64_rni_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_14/sim/bd_bf64_awni_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_15/sim/bd_bf64_wni_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_16/sim/bd_bf64_bni_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_17/sim/bd_bf64_s00mmu_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_18/sim/bd_bf64_s00tr_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_19/sim/bd_bf64_s00sic_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_20/sim/bd_bf64_s00a2s_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_21/sim/bd_bf64_sarn_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_22/sim/bd_bf64_srn_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_23/sim/bd_bf64_sawn_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_24/sim/bd_bf64_swn_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_25/sim/bd_bf64_sbn_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_26/sim/bd_bf64_m00s2a_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_27/sim/bd_bf64_m00arn_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_28/sim/bd_bf64_m00rn_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_29/sim/bd_bf64_m00awn_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_30/sim/bd_bf64_m00wn_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_31/sim/bd_bf64_m00bn_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_32/sim/bd_bf64_m00e_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_33/sim/bd_bf64_m01s2a_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_34/sim/bd_bf64_m01arn_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_35/sim/bd_bf64_m01rn_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_36/sim/bd_bf64_m01awn_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_37/sim/bd_bf64_m01wn_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_38/sim/bd_bf64_m01bn_0.sv" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/ip/ip_39/sim/bd_bf64_m01e_0.sv" \
+
+verilog xil_defaultlib --include "/home/ja/vivado/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../project_1.gen/sources_1/bd/hw/ipshared/ec67/hdl" --include "../../../../project_1.gen/sources_1/bd/hw/ipshared/8391/hdl" --include "../../../../project_1.gen/sources_1/bd/hw/ipshared/f0b6/hdl/verilog" --include "../../../../project_1.gen/sources_1/bd/hw/ipshared/0127/hdl/verilog" \
+"../../../bd/hw/ip/hw_axi_smc_0/bd_0/sim/bd_bf64.v" \
+"../../../bd/hw/ip/hw_axi_smc_0/sim/hw_axi_smc_0.v" \
+"../../../bd/hw/sim/hw.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
