@@ -3767,10 +3767,8 @@ CONFIG_imagefeature-serial-autologin-root=y
 CONFIG_Init-manager-sysvinit=y
 
 #
-# User Packages
+# user packages 
 #
-# CONFIG_gpio-demo is not set
-# CONFIG_peekpoke is not set
 
 #
 # PetaLinux RootFS Settings

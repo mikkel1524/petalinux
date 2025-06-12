@@ -1,7 +1,12 @@
 #!/bin/bash
 
-# Skrypt do konwersji wszystkich plików do UTF-8
+# Skrypt do konwersji wszystkich plików do UTF-8 i czyszczenia duplikatów
 
+# Usuniecie potencjalnych duplikatów plików
+find project-spec/meta-user/recipes-core/images -name "petalinux-image-minimal.bbappend.*" -delete
+find project-spec/meta-user/recipes-core/images -name "image-nfs.inc.*" -delete
+
+# Konwersja plików do UTF-8
 find . -type f -name "*.inc" -o -name "*.bbappend" -o -name "*.conf" | while read file; do
     # Sprawdz czy plik jest tekstowy
     if file "$file" | grep -q text; then
