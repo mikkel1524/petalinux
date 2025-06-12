@@ -26,8 +26,8 @@ elif [ -f /etc/arch-release ]; then
     sudo systemctl restart nfs-server
 
 else
-    # Proba uniwersalnych komend
-    echo "Nie wykryto systemu, proba uniwersalnych komend..."
+    # Próba uniwersalnych komend
+    echo "Nie wykryto systemu, próba uniwersalnych komend..."
     sudo systemctl restart nfs-server 2>/dev/null || \
     sudo systemctl restart nfs-kernel-server 2>/dev/null || \
     sudo service nfs-server restart 2>/dev/null || \
@@ -35,9 +35,9 @@ else
     sudo /etc/init.d/nfs-server restart 2>/dev/null || \
     sudo /etc/init.d/nfs-kernel-server restart 2>/dev/null
 
-    if [ $? -ne 0 ]; then
+    if [ $Z -ne 0 ]; then
         echo "Nie uda³o siê zrestartowaæ serwera NFS automatycznie."
-        echo "Sprobuj rêcznie jedn¹ z poni¿szych komend:"
+        echo "Spróbuj rêcznie jedn¹ z poni¿szych komend:"
         echo "sudo systemctl restart nfs-server"
         echo "sudo systemctl restart nfs-kernel-server"
         echo "sudo service nfs-server restart"
@@ -51,27 +51,27 @@ echo "Sprawdzanie statusu us³ug NFS..."
 
 # rpcbind/portmap powinien dzia³aæ
 if pgrep -x "rpcbind" > /dev/null || pgrep -x "portmap" > /dev/null; then
-    echo "? rpcbind/portmap dzia³a"
+    echo "Z rpcbind/portmap dzia³a"
 else
-    echo "? rpcbind/portmap nie dzia³a - próba uruchomienia"
+    echo "Z rpcbind/portmap nie dzia³a - próba uruchomienia"
     sudo systemctl start rpcbind 2>/dev/null || sudo service rpcbind start 2>/dev/null
 fi
 
 # Sprawdzanie czy mountd dzia³a
 if pgrep -x "rpc.mountd" > /dev/null; then
-    echo "? rpc.mountd dzia³a"
+    echo "Z rpc.mountd dzia³a"
 else
-    echo "? rpc.mountd nie dzia³a - mo¿e byæ problem z serwerem NFS"
+    echo "Z rpc.mountd nie dzia³a - mo¿e byæ problem z serwerem NFS"
 fi
 
 # Sprawdzanie czy nfsd dzia³a
 if pgrep -x "nfsd" > /dev/null; then
-    echo "? nfsd dzia³a"
+    echo "Z nfsd dzia³a"
 else
-    echo "? nfsd nie dzia³a - mo¿e byæ problem z serwerem NFS"
+    echo "Z nfsd nie dzia³a - mo¿e byæ problem z serwerem NFS"
 fi
 
-# Pokazanie eksportowanych katalogow
+# Pokazanie eksportowanych katalogów
 echo "\nEksportowane katalogi NFS:"
 sudo exportfs -v
 

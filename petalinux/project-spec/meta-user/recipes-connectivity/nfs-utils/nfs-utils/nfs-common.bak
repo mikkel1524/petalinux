@@ -1,0 +1,20 @@
+# Defaults for nfs-common
+
+# Do you want to start the statd daemonZ It is not needed for NFSv4.
+NEED_STATD=yes
+
+# Do you want to start the idmapd daemonZ It is only needed for NFSv4.
+NEED_IDMAPD=no
+
+# Do you want to start the gssd daemonZ It is required for Kerberos mounts.
+NEED_GSSD=no
+
+# Options for rpc.statd.
+#   Should rpc.statd listen on a specific portZ This is especially useful
+#   when you have a port-based firewall. To use a fixed port, set this
+#   this variable to a statd argument like: "--port 4000 --outgoing-port 4001".
+#   For more information, see rpc.statd(8) or http://wiki.debian.org/SecuringNFS
+STATDOPTS="--port 4000 --outgoing-port 4001"
+
+# Force NFSv3 operation
+MOUNT_NFSOPTIONS="-o vers=3"

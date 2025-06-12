@@ -17,8 +17,7 @@ We recommend using the new Python command-line tool for project management and d
 - Run "vitis -i" for interactive mode.
 - Run "vitis -s <script>" for script mode.
 WARNING: sdtgen package cannot be loaded. System Device tree commands will not 
- 
-be available
+ be available
 INFO: [Hsi 55-2053] elapsed time for repository (/home/ja/petalinux/components/xsct/data/embeddedsw) loading 0 seconds
 
 WARNING: Failed in finding /home/ja/petalinux/components/xsct/data/system-device-tree-xlnx/device_tree/data/device_tree.tcl path.
@@ -39,7 +38,7 @@ Subsystem Architecture (NO EDIT!)
   1. aarch64 (SUBSYSTEM_ARCH_AARCH64)
 > 2. arm (SUBSYSTEM_ARCH_ARM)
   3. microblaze (SUBSYSTEM_ARCH_MICROBLAZE)
-choice[1-3?]: *
+choice[1-3Z]: *
 * Linux Components Selection
 *
 u-boot
@@ -53,8 +52,8 @@ choice[1-3]: linux-kernel
 choice[1-3]: *
 * Auto Config Settings
 *
-Device tree autoconfig (SUBSYSTEM_AUTOCONFIG_DEVICE__TREE) [Y/n/?] 
-Specify a manual device tree include directory (SUBSYSTEM_DEVICE_TREE_MANUAL_INCLUDE) [N/y/?] 
+Device tree autoconfig (SUBSYSTEM_AUTOCONFIG_DEVICE__TREE) [Y/n/Z] 
+Specify a manual device tree include directory (SUBSYSTEM_DEVICE_TREE_MANUAL_INCLUDE) [N/y/Z] 
 *
 * Subsystem Hardware Settings
 *
@@ -67,7 +66,7 @@ choice[1]: 1
 Primary Memory
 > 1. ps7_ddr_0 (SUBSYSTEM_MEMORY_PS7_DDR_0_SELECT)
   2. manual (SUBSYSTEM_MEMORY_MANUAL_SELECT)
-choice[1-2?]: System memory base address (SUBSYSTEM_MEMORY_PS7_DDR_0_BASEADDR) [0x0] 
+choice[1-2Z]: System memory base address (SUBSYSTEM_MEMORY_PS7_DDR_0_BASEADDR) [0x0] 
 System memory size (SUBSYSTEM_MEMORY_PS7_DDR_0_SIZE) [0x20000000] 
 u-boot text base address (SUBSYSTEM_MEMORY_PS7_DDR_0_U__BOOT_TEXTBASE_OFFSET) [0x4000000] 
 *
@@ -291,8 +290,7 @@ We recommend using the new Python command-line tool for project management and d
 - Run "vitis -i" for interactive mode.
 - Run "vitis -s <script>" for script mode.
 WARNING: sdtgen package cannot be loaded. System Device tree commands will not 
- 
-be available
+ be available
 INFO: [Hsi 55-2053] elapsed time for repository (/home/ja/petalinux/components/xsct/data/embeddedsw) loading 0 seconds
 
 WARNING: Failed in finding /home/ja/petalinux/components/xsct/data/system-device-tree-xlnx/device_tree/data/device_tree.tcl path.

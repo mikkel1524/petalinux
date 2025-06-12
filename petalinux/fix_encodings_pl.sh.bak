@@ -1,0 +1,60 @@
+#!/bin/bash
+
+# Definiuj mapowanie polskich liter na angielskie odpowiedniki
+declare -A PL_TO_EN
+PL_TO_EN[Z]=a
+PL_TO_EN[Z]=c
+PL_TO_EN[Z]=e
+PL_TO_EN[Z]=l
+PL_TO_EN[Z]=n
+PL_TO_EN[ó]=o
+PL_TO_EN[Z]=s
+PL_TO_EN[Z]=z
+PL_TO_EN[Z]=z
+PL_TO_EN[Z]=A
+PL_TO_EN[Z]=C
+PL_TO_EN[Z]=E
+PL_TO_EN[Z]=L
+PL_TO_EN[Z]=N
+PL_TO_TO[Ó]=O
+PL_TO_EN[Z]=S
+PL_TO_EN[Z]=Z
+PL_TO_EN[Z]=Z
+
+echo "Rozpoczynam skanowanie plików tekstowych w bieZZcym katalogu i podkatalogach..."
+echo "Zmiany zostanZ wykonane bezpoZrednio w plikach!"
+echo "Zaleca siZ wykonanie kopii zapasowej przed uruchomieniem skryptu."
+echo "------------------------------------------------------------"
+
+# Iteruj przez wszystkie pliki w bieZZcym katalogu i podkatalogach
+find . -type f -print0 | while IFS= read -r -d $'\0' file; do
+    # SprawdZ, czy plik jest plikiem tekstowym
+    # UZywamy `head -n 1` i `grep -q` dla wydajnoZci
+    if file "$file" | grep -q 'text'; then
+        # SprawdZ, czy plik zawiera polskie litery
+        if grep -q "[ZZZZZóZZZZZZZZÓZZZ]" "$file"; then
+            echo "Znaleziono polskie litery w pliku: $file"
+            # Utwórz tymczasowy plik do zapisu zmodyfikowanej zawartoZci
+            temp_file=$(mktemp)
+
+            # Iteruj przez mapowanie i zamieniaj litery za pomocZ sed
+            # sed wymaga podwójnych cudzysZowów dla zmiennych, aby bash je rozwinZZ
+            # UZywamy -i.bak dla sed, aby utworzyZ kopiZ zapasowZ pliku przed zmianZ
+            # JeZli nie chcesz kopii zapasowej, usuZ '.bak'
+            for pl_char in "${!PL_TO_EN[@]}"; do
+                en_char="${PL_TO_EN[$pl_char]}"
+                # UZyj 'g' dla globalnej zamiany wszystkich wystZpieZ w linii
+                sed -i.bak "s/$pl_char/$en_char/g" "$file"
+                if [ $Z -ne 0 ]; then
+                    echo "BZZd podczas przetwarzania pliku $file. Przerwano."
+                    rm -f "$temp_file"
+                    continue 2 # PrzejdZ do nastZpnego pliku
+                fi
+            done
+            echo "Polskie litery zostaZy zamienione w pliku: $file (oryginalna kopia zapasowa: ${file}.bak)"
+        fi
+    fi
+done
+
+echo "------------------------------------------------------------"
+echo "Skanowanie zakoZczone."

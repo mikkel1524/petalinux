@@ -1,37 +1,14 @@
-2025-06-12 11:36:53,805 - [DEBUG] Using xsct from : /home/ja/petalinux/components/xsct/bin/xsct
-2025-06-12 11:36:53,805 - [INFO] Getting Platform info from HW file
-2025-06-12 11:36:53,805 - [DEBUG] Using the soc_family specified by user:zynq
-2025-06-12 11:36:53,806 - [INFO] Generating Kconfig for project
-2025-06-12 11:36:53,806 - [DEBUG] Generating System HW file
-2025-06-12 11:36:53,806 - [DEBUG] xsct -sdx -nodisp /home/ja/Dokumenty/projekty/peta/petalinux/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/hw-description.tcl plnx_gen_hwsysconf /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/hw-description/system.xsa
-2025-06-12 11:36:58,626 - [DEBUG] 
-
-****** Software Commandline Tool (XSCT) v2024.2.0
-  **** SW Build 5233591 on Sat Nov 02 20:05:54 MDT 2024
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-
-
-Warning: XSCT is deprecated and will be removed in future releases.
-We recommend using the new Python command-line tool for project management and debugging:
-- Run "vitis -i" for interactive mode.
-- Run "vitis -s <script>" for script mode.
-WARNING: sdtgen package cannot be loaded. System Device tree commands will not 
- 
-be available
-INFO: [Hsi 55-2053] elapsed time for repository (/home/ja/petalinux/components/xsct/data/embeddedsw) loading 0 seconds
-
-WARNING: Failed in finding /home/ja/petalinux/components/xsct/data/system-device-tree-xlnx/device_tree/data/device_tree.tcl path.
-
-
-2025-06-12 11:36:58,669 - [DEBUG] Hardware Configuration:
-2025-06-12 11:36:58,669 - [DEBUG] MACHINE     = "None"
-2025-06-12 11:36:58,669 - [DEBUG] DEVICE_ID   = "7z020"
-2025-06-12 11:36:58,669 - [DEBUG] SOC_FAMILY  = "zynq"
-2025-06-12 11:36:58,669 - [DEBUG] SOC_VARIANT = ""
-2025-06-12 11:36:58,669 - [INFO] Silentconfig project
-2025-06-12 11:36:58,669 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/config conf /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/configs/Kconfig
-2025-06-12 11:36:58,674 - [DEBUG] *
+2025-06-12 11:39:03,828 - [DEBUG] Using xsct from : /home/ja/petalinux/components/xsct/bin/xsct
+2025-06-12 11:39:03,828 - [INFO] Getting Platform info from HW file
+2025-06-12 11:39:03,828 - [DEBUG] Using the soc_family specified by user:zynq
+2025-06-12 11:39:03,835 - [DEBUG] Hardware Configuration:
+2025-06-12 11:39:03,835 - [DEBUG] MACHINE     = "None"
+2025-06-12 11:39:03,835 - [DEBUG] DEVICE_ID   = "7z020"
+2025-06-12 11:39:03,835 - [DEBUG] SOC_FAMILY  = "zynq"
+2025-06-12 11:39:03,835 - [DEBUG] SOC_VARIANT = ""
+2025-06-12 11:39:03,835 - [INFO] Silentconfig project
+2025-06-12 11:39:03,835 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/config conf /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/configs/Kconfig
+2025-06-12 11:39:03,842 - [DEBUG] *
 * PetaLinux System Configuration
 *
 ZYNQ Configuration (SYSTEM_ZYNQ) [Y/Z] y
@@ -39,7 +16,7 @@ Subsystem Architecture (NO EDIT!)
   1. aarch64 (SUBSYSTEM_ARCH_AARCH64)
 > 2. arm (SUBSYSTEM_ARCH_ARM)
   3. microblaze (SUBSYSTEM_ARCH_MICROBLAZE)
-choice[1-3?]: *
+choice[1-3Z]: *
 * Linux Components Selection
 *
 u-boot
@@ -53,8 +30,8 @@ choice[1-3]: linux-kernel
 choice[1-3]: *
 * Auto Config Settings
 *
-Device tree autoconfig (SUBSYSTEM_AUTOCONFIG_DEVICE__TREE) [Y/n/?] 
-Specify a manual device tree include directory (SUBSYSTEM_DEVICE_TREE_MANUAL_INCLUDE) [N/y/?] 
+Device tree autoconfig (SUBSYSTEM_AUTOCONFIG_DEVICE__TREE) [Y/n/Z] 
+Specify a manual device tree include directory (SUBSYSTEM_DEVICE_TREE_MANUAL_INCLUDE) [N/y/Z] 
 *
 * Subsystem Hardware Settings
 *
@@ -67,7 +44,7 @@ choice[1]: 1
 Primary Memory
 > 1. ps7_ddr_0 (SUBSYSTEM_MEMORY_PS7_DDR_0_SELECT)
   2. manual (SUBSYSTEM_MEMORY_MANUAL_SELECT)
-choice[1-2?]: System memory base address (SUBSYSTEM_MEMORY_PS7_DDR_0_BASEADDR) [0x0] 
+choice[1-2Z]: System memory base address (SUBSYSTEM_MEMORY_PS7_DDR_0_BASEADDR) [0x0] 
 System memory size (SUBSYSTEM_MEMORY_PS7_DDR_0_SIZE) [0x20000000] 
 u-boot text base address (SUBSYSTEM_MEMORY_PS7_DDR_0_U__BOOT_TEXTBASE_OFFSET) [0x4000000] 
 *
@@ -96,9 +73,9 @@ Primary Ethernet
 choice[1-2Z]: Randomise MAC address (SUBSYSTEM_ETHERNET_PS7_ETHERNET_0_MAC_AUTO) [N/y/Z] 
   Ethernet MAC address (SUBSYSTEM_ETHERNET_PS7_ETHERNET_0_MAC) [00:0a:35:00:1e:53] 
 Obtain IP address automatically (SUBSYSTEM_ETHERNET_PS7_ETHERNET_0_USE_DHCP) [N/y/Z] 
-  Static IP address (SUBSYSTEM_ETHERNET_PS7_ETHERNET_0_IP_ADDRESS) [192.168.0.10] (NEW) 
-  Static IP netmask (SUBSYSTEM_ETHERNET_PS7_ETHERNET_0_IP_NETMASK) [255.255.255.0] (NEW) 
-  Static IP gateway (SUBSYSTEM_ETHERNET_PS7_ETHERNET_0_IP_GATEWAY) [192.168.0.1] (NEW) 
+  Static IP address (SUBSYSTEM_ETHERNET_PS7_ETHERNET_0_IP_ADDRESS) [192.168.0.10] 
+  Static IP netmask (SUBSYSTEM_ETHERNET_PS7_ETHERNET_0_IP_NETMASK) [255.255.255.0] 
+  Static IP gateway (SUBSYSTEM_ETHERNET_PS7_ETHERNET_0_IP_GATEWAY) [192.168.0.1] 
 *
 * Flash Settings
 *
@@ -143,7 +120,7 @@ Extra dts/dtsi files (SUBSYSTEM_EXTRA_DT_FILES) []
 *
 generate boot args automatically (SUBSYSTEM_BOOTARGS_AUTO) [Y/n/Z] 
 enable kernel earlyprintk (SUBSYSTEM_BOOTARGS_EARLYPRINTK) [Y/n/Z] 
-Auto generated bootargs (NO EDIT!) (SUBSYSTEM_BOOTARGS_GENERATED) [console=ttyPS0,115200 earlycon root=/dev/nfs nfsroot=192.168.64.32:/home/NFSshare,tcp ip=dhcp rw] 
+Auto generated bootargs (NO EDIT!) (SUBSYSTEM_BOOTARGS_GENERATED) [console=ttyPS0,115200 earlycon root=/dev/nfs nfsroot=192.168.100.118:/tftpboot/nfsroot,tcp ip=192.168.0.10:192.168.100.118 rw] 
 Add extra boot args (SUBSYSTEM_EXTRA_BOOTARGS) [] 
 Devicetree compiler flags (SUBSYSTEM_DEVICETREE_COMPILER_FLAGS) [-@] 
 Devicetree overlay (SUBSYSTEM_DTB_OVERLAY) [N/y/Z] 
@@ -271,42 +248,15 @@ user layer 0 (USER_LAYER_0) []
 #
 # configuration written to /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/config
 #
-2025-06-12 11:36:58,696 - [DEBUG] /home/ja/Dokumenty/projekty/peta/petalinux/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/petalinux-find-ipaddr AUTO
-2025-06-12 11:36:58,713 - [DEBUG] 
+2025-06-12 11:39:03,873 - [DEBUG] /home/ja/Dokumenty/projekty/peta/petalinux/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/petalinux-find-ipaddr AUTO
+2025-06-12 11:39:03,885 - [DEBUG] 
 192.168.100.118
 
 
 
-2025-06-12 11:36:58,714 - [DEBUG] xsct -sdx -nodisp /home/ja/Dokumenty/projekty/peta/petalinux/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/petalinux_hsm.tcl get_flash_width_parts /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/config /home/ja/Dokumenty/projekty/peta/petalinux/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/data/ipinfo.yaml /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/hw-description/system.xsa /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/flash_parts.txt
-2025-06-12 11:37:03,569 - [DEBUG] 
-
-****** Software Commandline Tool (XSCT) v2024.2.0
-  **** SW Build 5233591 on Sat Nov 02 20:05:54 MDT 2024
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-
-
-Warning: XSCT is deprecated and will be removed in future releases.
-We recommend using the new Python command-line tool for project management and debugging:
-- Run "vitis -i" for interactive mode.
-- Run "vitis -s <script>" for script mode.
-WARNING: sdtgen package cannot be loaded. System Device tree commands will not 
- 
-be available
-INFO: [Hsi 55-2053] elapsed time for repository (/home/ja/petalinux/components/xsct/data/embeddedsw) loading 0 seconds
-
-WARNING: Failed in finding /home/ja/petalinux/components/xsct/data/system-device-tree-xlnx/device_tree/data/device_tree.tcl path.
-
-
-2025-06-12 11:37:03,571 - [INFO] Generating kconfig for rootfs
-2025-06-12 11:37:03,571 - [DEBUG] python3 /home/ja/Dokumenty/projekty/peta/petalinux/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/rootfsconfigs/rootfs_config.py --generate_kconfig /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/meta-user/conf/user-rootfsconfig /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs
-2025-06-12 11:37:03,620 - [DEBUG] 
-
-
-
-2025-06-12 11:37:03,620 - [INFO] Silentconfig rootfs
-2025-06-12 11:37:03,620 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfs_config conf /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig
-2025-06-12 11:37:03,630 - [DEBUG] *
+2025-06-12 11:39:03,888 - [INFO] Silentconfig rootfs
+2025-06-12 11:39:03,888 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfs_config conf /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfsconfigs/Kconfig
+2025-06-12 11:39:03,899 - [DEBUG] *
 * Configuration
 *
 *
@@ -3602,24 +3552,7 @@ Add Users to Sudo users (ADD_USERS_TO_SUDOERS) [petalinux]
 #
 # configuration written to /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfs_config
 #
-2025-06-12 11:37:03,633 - [INFO] Generating configuration files
-2025-06-12 11:37:03,634 - [DEBUG] No multilibs enabled.
-2025-06-12 11:37:03,634 - [DEBUG] No multilibs enabled.
-2025-06-12 11:37:03,634 - [INFO] Adding user layers
-2025-06-12 11:37:03,634 - [DEBUG] Shutting down bitbake
-2025-06-12 11:37:03,634 - [DEBUG] Adding layer: /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/meta-user
-2025-06-12 11:37:03,634 - [DEBUG] bitbake-layers -F add-layer /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/meta-user
-2025-06-12 11:37:04,592 - [DEBUG] 
-NOTE: Starting bitbake server...
-NOTE: Started PRServer with DBfile: /home/ja/Dokumenty/projekty/peta/petalinux/build/cache/prserv.sqlite3, Address: 127.0.0.1:45563, PID: 539414
-
-
-
-2025-06-12 11:37:04,596 - [INFO] Generating machine conf file
-2025-06-12 11:37:04,602 - [INFO] Generating plnxtool conf file
-2025-06-12 11:37:04,611 - [DEBUG] python3 /home/ja/Dokumenty/projekty/peta/petalinux/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/rootfsconfigs/rootfs_config.py --update_cfg /home/ja/Dokumenty/projekty/peta/petalinux/project-spec/configs/rootfs_config /home/ja/Dokumenty/projekty/peta/petalinux/build/conf/plnxtool.conf zynq
-2025-06-12 11:37:04,650 - [DEBUG] 
-
-
-
-2025-06-12 11:37:04,651 - [DEBUG] Shutting down bitbake
+2025-06-12 11:39:03,903 - [INFO] Generating configuration files
+2025-06-12 11:39:03,904 - [DEBUG] No multilibs enabled.
+2025-06-12 11:39:03,904 - [DEBUG] No multilibs enabled.
+2025-06-12 11:39:03,913 - [DEBUG] Shutting down bitbake
