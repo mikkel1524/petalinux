@@ -1,2 +1,33 @@
-menu "user packages " 
+menu "User Packages"
+
+config nfs-utils
+	bool "nfs-utils"
+	help
+	  NFS utilities
+
+config nfs-utils-client
+	bool "nfs-utils-client"
+	help
+	  NFS client utilities
+
+config net-tools
+	bool "net-tools"
+	help
+	  Basic networking tools
+
+config ethtool
+	bool "ethtool"
+	help
+	  Ethernet device configuration tool
+
+config gpio-demo
+	bool "gpio-demo"
+	help
+	  GPIO demo application
+
+config peekpoke
+	bool "peekpoke"
+	help
+	  Simple memory peek/poke utility
+
 endmenu
